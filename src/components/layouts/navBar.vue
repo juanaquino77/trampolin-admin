@@ -1,7 +1,7 @@
 <template>
 <div>
   <va-navBar/>
-  <aside class="main-sidebar">
+    <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar" style="height: auto;">
       <!-- Sidebar user panel
@@ -124,16 +124,12 @@
     </section>
     <!-- /.sidebar -->
   </aside>
-  <div class="content-wrapper" style="min-height: 960px;">
-    <dashboardV2/>
-  </div>
-   
 </div>
 </template>
 
 <script>
-import navBar from '../../../node_modules/vue2-admin-lte/src/NaviBar'
-import DashboardV2 from '../dashboard/Dashboard.v2'
+import navBar from '../../../node_modules/vue2-admin-lte/src/NaviBar.vue'
+// import DashboardV2 from '../dashboard/Dashboard.v2'
 
 export default {
   name: 'navBar',
@@ -142,53 +138,52 @@ export default {
   },
     components: {
       'va-navBar': navBar,
-      'dashboardV2': DashboardV2,
+      // 'dashboardV2': DashboardV2,
   }
 } 
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.skin-black .main-header .logo {
-  background-color: #367fa9;
-  color: #fff;
-  border-bottom: 0 solid transparent;
+  .skin-black .main-header .logo {
+    background-color: #367fa9;
+    color: #fff;
+    border-bottom: 0 solid transparent;
+    }
+  .main-sidebar, .main-sidebar-closed.main-sidebar-fixed .main-sidebar:hover {
+    background-color: #3d3d3d;
   }
-.main-sidebar, .main-sidebar-closed.main-sidebar-fixed .main-sidebar:hover {
-  background-color: #3d3d3d;
-}
-.skin-black .wrapper, .skin-black .main-sidebar, .skin-black .left-side {
-  background-color: #3d3d3d;
-  padding-top: 60px;
-  height: 1000px;
-}
-.page-sidebar, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover {
-  background-color: #3d3d3d;
-}
-.page-sidebar .page-sidebar-menu>li.open>a, .page-sidebar .page-sidebar-menu>li:hover>a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.open>a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li:hover>a {
-  background: #303030;
-  color: #d9d9d9;
-}
-.page-sidebar .page-sidebar-menu>li>a>span, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li>a>span {
-  border-top: 1px solid #484848;
-  color: #d9d9d9;
-}
-.skin-black .sidebar-menu>li:hover>a, .skin-black .sidebar-menu>li.active>a, .skin-black-open>a
-{
-  color: #d9d9d9;
-  background-color: #303030;
-}
-.skin-black .sidebar a {
-  color: #d9d9d9;
-}
-.sidebar-menu>li {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  border-bottom: 1px solid #484848;
-  color: #d9d9d9;
-}
-.skin-black .sidebar-menu>li>.treeview-menu {
-  background: #3d3d3d;
-}
+  .skin-black .wrapper, .skin-black .main-sidebar, .skin-black .left-side {
+    background-color: #3d3d3d;
+    padding-top: 60px;
+    height: 1000px;
+  }
+  .page-sidebar, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover {
+    background-color: #3d3d3d;
+  }
+  .page-sidebar .page-sidebar-menu>li.open>a, .page-sidebar .page-sidebar-menu>li:hover>a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li.open>a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li:hover>a {
+    background: #303030;
+    color: #d9d9d9;
+  }
+  .page-sidebar .page-sidebar-menu>li>a>span, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu>li>a>span {
+    border-top: 1px solid #484848;
+    color: #d9d9d9;
+  }
+  .skin-black .sidebar-menu>li:hover>a, .skin-black .sidebar-menu>li.active>a, .skin-black-open>a
+  {
+    color: #d9d9d9;
+    background-color: #303030;
+  }
+  .skin-black .sidebar a {
+    color: #d9d9d9;
+  }
+  .sidebar-menu>li {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #484848;
+    color: #d9d9d9;
+  }
+  .skin-black .sidebar-menu>li>.treeview-menu {
+    background: #3d3d3d;
+  }
 </style>

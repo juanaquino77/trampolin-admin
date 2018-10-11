@@ -1,19 +1,20 @@
 <template>
-  <div id="app">
-    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <navBar/>
-    <!-- <DashboardV2/> -->
-    
-    
+  <div id="app" class="wrapper">
+      <navBar/>
+    <div class="content-wrapper" style="height: 960px;">
+      <!-- <Dashboard/> -->  
+      <router-view>
+      </router-view>
+      <!-- <Teatro/> -->
+    </div>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld'
 import navBar from './components/layouts/navBar'
-import DashboardV2 from './components/dashboard/Dashboard.v2'
-
+import  Dashboard  from './components/dashboard/table'
+// import  Teatro  from './components/dashboard/teatro'
 
 // css files
 import '../node_modules/vue2-admin-lte/src/lib/css.js'
@@ -24,9 +25,9 @@ import '../node_modules/vue2-admin-lte/src/lib/script.js'
 export default {
   name: 'app',
   components: {
-    HelloWorld,
     navBar,
-    DashboardV2,
+    Dashboard,
+    // Teatro,
   }
 }
 </script>

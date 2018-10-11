@@ -1,12 +1,18 @@
 <template>
-  <div class="box">
-    <div class="box-header">
+  <div class="box box-info">
+    <div class="box-header with-border">
       <h3 class="box-title">Espectaculos</h3>
+      <div class="box-tools pull-right">
+        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+        </button>
+        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+      </div>
     </div>
     <!-- /.box-header -->
-    <div class="box-body table-responsive no-padding">
-      <table class="table table-hover">
-        <tbody>
+    <div class="box-body">
+      <div class="table-responsive">
+      <table class="table table-hover">    
+        <thead>
           <tr>
             <th>Nombre</th>
             <th>Status</th>
@@ -19,6 +25,8 @@
             <th>Proxima funcion</th>
             <th>Acciones</th>
           </tr>
+        </thead>
+        <tbody>
           <tr>
             <td>La Obra de Marcos</td>
             <td><span class="label label-success">Approved</span></td>
@@ -69,18 +77,17 @@
           </tr>
         </tbody>
       </table>
+      </div>
+      <!-- /.table-responsive -->
     </div>
     <!-- /.box-body -->
+    <!-- /.box-footer -->
   </div>
 </template>
 <script>
-import Dashboard from '../../../node_modules/vue2-admin-lte/src/Slider'
 export default {
-  name: 'dashboardV2',
-    created () {
-  },
+  name: 'Dashboard',
   components: {
-    'Dashboard': Dashboard,
   }
 }
 </script>
