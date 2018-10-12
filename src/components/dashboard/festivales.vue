@@ -1,7 +1,24 @@
 <template>
+<div>
+  <div class="box box-default box-solid">
+    <div class="box-header with-border">
+      <h3 class="box-title">Expandable</h3>
+
+      <div class="box-tools pull-right">
+        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+        </button>
+      </div>
+      <!-- /.box-tools -->
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body" style="">
+      The body of the box
+    </div>
+    <!-- /.box-body -->
+  </div>
   <div class="box box-info">
     <div class="box-header with-border">
-      <h3 class="box-title">Teatros</h3>
+      <h3 class="box-title">Festivales</h3>
       <div class="box-tools pull-right">
         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
         </button>
@@ -17,70 +34,59 @@
             <th>Nombre</th>
             <th>Status</th>
             <th>Ciudad</th>
-            <th>Domicilio</th>
+            <th>Teatro principal</th>
             <th>Persona</th>
             <th>Ultimo acceso</th>
-            <th>Funciones acordadas</th>
-            <th>Proxima funcion</th>
+            <th>Funciones desprendidas</th>
+            <th>Proxima edición</th>
             <th>Acciones</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Teatro Municipal</td>
+            <td>Teatro a mil</td>
             <td><span class="label label-success">Verificado</span></td>
-            <td>Mar del Plata, AR</td>
-            <td>Luro 222</td>
+            <td>Santiago, CL</td>
+            <td>GAM</td>
             <td>Claudio Tolca<label>cc@tolca.com.ar</label></td>
             <td>11-7-2014</td>
             <td>1</td>
             <td>11-7-2014</td>
             <td>Ver perfil | Editar | Suspender | Eliminar</td>
           </tr>
-         <tr>
-            <td>Teatro Colon</td>
+          <tr>
+            <td>Festival internacional de teatro de Bahia Blanca</td>
             <td><span class="label label-warning">Pendiente</span></td>
-            <td>Mar del Plata, AR</td>
-            <td>Luro 222</td>
-            <td>Claudio Tolca<label>cc@tolca.com.ar</label></td>
+            <td>Bahia Blanca, AR</td>
+            <td>Municipal</td>
+            <td>Marcos Moreira<label>lamuni@cordoba.com.ar</label></td>
             <td>11-7-2014</td>
             <td>1</td>
             <td>11-7-2014</td>
             <td>Ver perfil | Editar | Suspender | Eliminar</td>
           </tr>
-         <tr>
-            <td>Teatro Municipal</td>
-            <td><span class="label label-danger">Verificado</span></td>
-            <td>Mar del Plata, AR</td>
-            <td>Luro 222</td>
-            <td>Claudio Tolca<label>cc@tolca.com.ar</label></td>
-            <td>11-7-2014</td>
-            <td>1</td>
-            <td>No tiene</td>
-            <td>Ver perfil | Editar | Suspender | Eliminar</td>
-          </tr>
-         <tr>
-            <td>Teatro Municipal</td>
-            <td><span class="label label-warning">Pendiente</span></td>
-            <td>Mar del Plata, AR</td>
-            <td>Luro 222</td>
-            <td>Claudio Tolca<label>cc@tolca.com.ar</label></td>
+          <tr>
+            <td>Festival internacional temporales de teatro</td>
+            <td><span class="label label-danger">Denied</span></td>
+            <td>Puerto mont, CL</td>
+            <td>CCPM</td>
+            <td>Marcos Moreira<label>lamuni@cordoba.com.ar</label></td>
             <td>11-7-2014</td>
             <td>1</td>
             <td>11-7-2014</td>
             <td>Ver perfil | Editar | Suspender | Eliminar</td>
           </tr>
-         <tr>
-            <td>Teatro Municipal</td>
-            <td><span class="label label-danger">Verificado</span></td>
-            <td>Mar del Plata, AR</td>
-            <td>Luro 222</td>
-            <td>Claudio Tolca<label>cc@tolca.com.ar</label></td>
+          <tr>
+            <td>Pirologias</td>
+            <td><span class="label label-danger">Denied</span></td>
+            <td>Haedo, AR</td>
+            <td>Border</td>
+            <td>Marcos Moreira<label>lamuni@cordoba.com.ar</label></td>
             <td>11-7-2014</td>
             <td>1</td>
             <td>11-7-2014</td>
             <td>Ver perfil | Editar | Suspender | Eliminar</td>
-          </tr>                                        
+          </tr>
         </tbody>
       </table>
       </div>
@@ -89,10 +95,11 @@
     <!-- /.box-body -->
     <!-- /.box-footer -->
   </div>
+</div>
 </template>
 <script>
 export default {
-  name: 'Teatro',
+  name: 'Festivales',
   components: {
   }
 }
