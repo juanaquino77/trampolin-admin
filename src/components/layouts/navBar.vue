@@ -30,26 +30,28 @@
       <ul class="sidebar-menu tree" data-widget="tree">
         <!-- <li class="header">MAIN NAVIGATION</li> -->
         <li class="treeview">
-          <a href="#">
+          <!-- <span> -->
+          <router-link to="/espectaculos" class="router-link">
+          <!-- <a href="/espectaculos"> -->
             <i class="fa fa-dashboard"></i>
-            <span>
-              <router-link to="/espectaculos">Espectáculos</router-link>
-            </span>
-              <!-- <i class="fa fa-angle-left pull-right"></i> -->
-          </a>
+              <span>Espectáculos</span>
+          <!-- </a> -->
+                <!-- <i class="fa fa-angle-left pull-right"></i> -->
           <!-- <ul class="treeview-menu">
             <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
             <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
           </ul> -->
+          </router-link>
+          <!-- </span> -->
         </li>
         <li class="treeview">
-          <a href="#">
+          <router-link to="/teatro" class="router-link">
             <i class="fa fa-files-o"></i>
-            <span><router-link to="/teatro">Teátros</router-link></span>
-            <!-- <span class="pull-right-container">
-              <span class="label label-primary pull-right">4</span>
-            </span> -->
-          </a>
+              <span>Teátros</span>
+              <!-- <span class="pull-right-container">
+                <span class="label label-primary pull-right">4</span>
+              </span> -->
+          </router-link>
           <!-- <ul class="treeview-menu">
             <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
             <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
@@ -58,22 +60,22 @@
           </ul> -->
         </li>
         <li class="treeview">
-          <a href="#">
+          <router-link to="/festivales" class="router-link">
             <i class="fa fa-th"></i> 
-            <span><router-link to="/festivales">Festivales</router-link></span>
-            <!-- <span class="pull-right-container">
-              <small class="label pull-right bg-green">new</small>
-            </span> -->
-          </a>
+              <span>Festivales</span>
+              <!-- <span class="pull-right-container">
+                <small class="label pull-right bg-green">new</small>
+              </span> -->
+          </router-link>
         </li>
         <li class="treeview">
-          <a href="#">
+          <router-link to="/agenda" class="router-link">
             <i class="fa fa-pie-chart"></i>
-            <span><router-link to="/agenda">Agenda</router-link></span>
-            <!-- <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span> -->
-          </a>
+              <span>Agenda</span>
+              <!-- <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span> -->
+          </router-link>
           <!-- <ul class="treeview-menu">
             <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
             <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
@@ -82,13 +84,13 @@
           </ul> -->
         </li>
         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-laptop"></i>
-            <span><router-link to="/pagos">Pagos</router-link></span>
-            <!-- <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span> -->
-          </a>
+          <router-link to="/pagos" class="router-link">
+          <i class="fa fa-laptop"></i>
+              <span>Pagos</span>
+              <!-- <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span> -->
+          </router-link>
           <!-- <ul class="treeview-menu">
             <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
             <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
@@ -99,13 +101,13 @@
           </ul> -->
         </li>
         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-edit"></i>
-              <span><router-link to="/notificaciones">Notificaciones</router-link></span>
-            <!-- <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span> -->
-          </a>
+          <router-link to="/notificaciones" class="router-link">
+          <i class="fa fa-edit"></i>
+                <span>Notificaciones</span>
+              <!-- <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span> -->
+          </router-link>
           <!-- <ul class="treeview-menu">
             <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
@@ -113,13 +115,13 @@
           </ul> -->
         </li>
         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-table"></i>
-            <span><router-link to="/config">Configuración</router-link></span>
-            <!-- <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            <!-- </span> -->
-          </a>
+          <router-link to="/config" class="router-link">
+          <i class="fa fa-table"></i>
+              <span>Configuración</span>
+              <!-- <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span> -->
+          </router-link>
           <!-- <ul class="treeview-menu">
             <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
             <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
@@ -174,7 +176,7 @@ export default {
     border-top: 1px solid #484848;
     color: #d9d9d9;
   }
-  .skin-black .sidebar-menu>li:hover>a, .skin-black .sidebar-menu>li.active>a, .skin-black-open>a
+  .skin-black .sidebar-menu>li:hover>a, .skin-black-open>a
   {
     color: #d9d9d9;
     background-color: #303030;
@@ -192,7 +194,7 @@ export default {
   .skin-black .sidebar-menu>li>.treeview-menu {
     background: #3d3d3d;
   }
-  .skin-black .sidebar-menu>li.menu-open>a {
+  .skin-black .sidebar-menu>li.menu-open>.router-link {
     background-color:#e26a6a;
   }
 </style>

@@ -13,7 +13,7 @@
 <script>
 import HelloWorld from './components/HelloWorld'
 import navBar from './components/layouts/navBar'
-import  Dashboard  from './components/dashboard/table'
+import  Dashboard  from './components/dashboard/tablero'
 // import  Teatro  from './components/dashboard/teatro'
 
 // css files
@@ -40,5 +40,15 @@ export default {
   /* text-align: center; */
   color: #2c3e50;
   /* margin-top: 60px; */
+}
+.btn-primary {
+  background-color: #E26A6A;
+  /* background-color: #3c8dbc; */
+  border-color: #E26A6A;
+  /* border-color: #367fa9; */
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary.hover {
+    background-color: #cd2828;
+    border-color: #ab2121;
 }
 </style>

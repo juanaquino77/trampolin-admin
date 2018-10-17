@@ -37,7 +37,12 @@
             <td>1</td>
             <td>100Km</td>
             <td>11-7-2014</td>
-            <td>Ver perfil | Editar | Suspender | Eliminar</td>
+            <td>
+              <a class="btn btn-primary btn-xs">Ver perfil</a>
+              <a class="btn btn-info btn-xs">Editar</a>
+              <a class="btn btn-warning btn-xs">Suspender</a>
+              <a class="btn btn-danger btn-xs">Eliminar</a>
+            </td>
           </tr>
           <tr>
             <td>Alexander Pierce</td>

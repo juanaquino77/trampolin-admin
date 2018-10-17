@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import Router from 'vue-router'
+import Dashboard from './components/dashboard/dashboard.vue'
 import Teatro from './components/dashboard/teatro.vue'
 import Espectaculos from './components/dashboard/espectaculos.vue'
 import Festivales from './components/dashboard/festivales.vue'
@@ -14,6 +15,10 @@ Vue.config.productionTip = false
 
 var router = new Router({
   routes: [
+    {
+      path: '/',
+      component: Dashboard
+    },
     {
       path: '/espectaculos',
       component: Espectaculos
