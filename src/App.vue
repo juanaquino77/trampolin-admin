@@ -1,13 +1,17 @@
 <template>
+<v-app> 
   <div id="app" class="wrapper">
-      <navBar/>
+    <NaviBarorigin/>
     <div class="content-wrapper" style="height: 960px;">
+    <navBar/>
       <!-- <Dashboard/> -->  
       <router-view>
       </router-view>
       <!-- <Teatro/> -->
     </div>
   </div>
+</v-app> 
+
 </template>
 
 <script>
@@ -15,10 +19,13 @@ import HelloWorld from './components/HelloWorld'
 import navBar from './components/layouts/navBar'
 import  Dashboard  from './components/dashboard/tablero'
 // import  Teatro  from './components/dashboard/teatro'
+// import NaviBarorigin from './components/layouts/NaviBarorigin'
+import NaviBarorigin from './components/layouts/NaviBarorigin'
+
 
 // css files
 import '../node_modules/vue2-admin-lte/src/lib/css.js'
-
+import 'vuetify/dist/vuetify.min.css'
 // js files
 import '../node_modules/vue2-admin-lte/src/lib/script.js'
 
@@ -27,6 +34,8 @@ export default {
   components: {
     navBar,
     Dashboard,
+    NaviBarorigin,
+    
     // Teatro,
   }
 }

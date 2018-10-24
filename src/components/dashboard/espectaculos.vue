@@ -1,98 +1,81 @@
 <template>
-  <div class="box box-info">
-    <div class="box-header with-border">
-      <h3 class="box-title">Espectaculos</h3>
-      <div class="box-tools pull-right">
-        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-        </button>
-        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-      </div>
-    </div>
-    <!-- /.box-header -->
-    <div class="box-body">
-      <div class="table-responsive">
-      <table class="table table-hover">    
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Status</th>
-            <th>Ciudad de origen</th>
-            <th>Giras</th>
-            <th>Pagos</th>
-            <th>Ultimo acceso</th>
-            <th>Funciones acordadas</th>
-            <th>Distancia recorrida</th>
-            <th>Proxima funcion</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>La Obra de Marcos</td>
-            <td><span class="label label-success">Approved</span></td>
-            <td>Mar del Plata, AR</td>
-            <td>11-7-2014</td>
-            <td><span class="label label-success">OK</span></td>
-            <td>11-7-2014</td>
-            <td>1</td>
-            <td>100Km</td>
-            <td>11-7-2014</td>
-            <td>
-              <a class="btn btn-primary btn-xs">Ver perfil</a>
-              <a class="btn btn-info btn-xs">Editar</a>
-              <a class="btn btn-warning btn-xs">Suspender</a>
-              <a class="btn btn-danger btn-xs">Eliminar</a>
-            </td>
-          </tr>
-          <tr>
-            <td>Alexander Pierce</td>
-            <td><span class="label label-warning">Pending</span></td>
-            <td>Mar del Plata, AR</td>
-            <td>11-7-2014</td>
-            <td><span class="label label-success">OK</span></td>
-            <td>11-7-2014</td>
-            <td>1</td>
-            <td>100Km</td>
-            <td>11-7-2014</td>
-            <td>Ver perfil | Editar | Suspender | Eliminar</td>
-          </tr>
-          <tr>
-            <td>Bob Doe</td>
-            <td><span class="label label-danger">Denied</span></td>
-            <td>Mar del Plata, AR</td>
-            <td>11-7-2014</td>
-            <td><span class="label label-warning">Pending</span></td>
-            <td>11-7-2014</td>
-            <td>1</td>
-            <td>100Km</td>
-            <td>11-7-2014</td>
-            <td>Ver perfil | Editar | Suspender | Eliminar</td>
-          </tr>
-          <tr>
-            <td>Mike Doe</td>
-            <td><span class="label label-danger">Denied</span></td>
-            <td>Mar del Plata, AR</td>
-            <td>11-7-2014</td>
-            <td><span class="label label-danger">NO</span></td>
-            <td>11-7-2014</td>
-            <td>1</td>
-            <td>100Km</td>
-            <td>11-7-2014</td>
-            <td>Ver perfil | Editar | Suspender | Eliminar</td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
-      <!-- /.table-responsive -->
-    </div>
-    <!-- /.box-body -->
-    <!-- /.box-footer -->
+  <div>
+    <tablero v-bind:Tabla="tabla" :Headers="headers" :Title="title" />
   </div>
 </template>
 <script>
+import Tablero from './tablero'
 export default {
-  name: 'Teatro',
+  name: 'Espectaculos',
   components: {
-  }
+    Tablero,
+  },
+  data () {
+    return {
+      title: 'Espectaculos',
+      tabla: [
+        {
+          Nombre: "La Obra de Marcos",
+          Status: "OK",
+          CiudadDeOrigen: "Mar del Plata, AR",
+          Giras: "Activada",
+          Pagos: "Si",
+          UltimoAcceso: "11-7-2017",
+          FuncionesAcordadas: "1",
+          DistanciaRecorrida: "100Km",
+          ProximaFuncion: "17-7-2014",            
+          Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
+        },
+        {
+          Nombre: "La Obra de Carlos",
+          Status: "Suspendida",
+          CiudadDeOrigen: "CABA, AR",
+          Giras: "Cerrada",
+          Pagos: "Si",
+          UltimoAcceso: "11-7-2044",
+          FuncionesAcordadas: "2",
+          DistanciaRecorrida: "100Km",
+          ProximaFuncion: "1-7-2014",            
+          Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
+        },
+        {
+          Nombre: "La Obra de Vanina",
+          Status: "Eliminada",
+          CiudadDeOrigen: "Santiago, CL",
+          Giras: "Activada",
+          Pagos: "Pending",
+          UltimoAcceso: "11-7-2019",
+          FuncionesAcordadas: "3",
+          DistanciaRecorrida: "100Km",
+          ProximaFuncion: "Inexistente",            
+          Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
+        },
+        {
+          Nombre: "La Obra de Marcos",
+          Status: "Suspendida",
+          CiudadDeOrigen: "Mar del Plata, AR",
+          Giras: "Cerrada",
+          Pagos: "NO",
+          UltimoAcceso: "11-7-2011",
+          FuncionesAcordadas: "4",
+          DistanciaRecorrida: "100Km",
+          ProximaFuncion: "Inexistente",            
+          Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
+        }
+      ],
+      headers: [
+        { text: 'Nombre', align: 'left', value: 'Nombre' },
+        { text: 'Status', align: 'left', value: 'Status' }, 
+        { text: 'Ciudad De Origen', align: 'left', value: 'CiudadDeOrigen' },
+        { text: 'Giras', align: 'left', value: 'Giras' },
+        { text: 'Pagos', align: 'left', value: 'Pagos' }, 
+        { text: 'Ultimo Acceso', align: 'left', value: 'UltimoAcceso' },          
+        { text: 'Funciones Acordadas', align: 'left', value: 'FuncionesAcordadas' },
+        { text: 'Distancia recorrida', align: 'left', value: 'DistanciaRecorrida' }, 
+        { text: 'Proxima Funcion', align: 'left', value: 'ProximaFuncion' },
+        { text: 'Acciones', align: 'left', value: 'Acciones' },
+      ],
+    }
+  },
 }
 </script>

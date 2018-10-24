@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import './plugins/vuetify'
 import App from './App.vue'
 import Router from 'vue-router'
 import Dashboard from './components/dashboard/dashboard.vue'
@@ -9,8 +10,10 @@ import Agenda from './components/dashboard/agenda.vue'
 import Pagos from './components/dashboard/pagos.vue'
 import Notificaciones from './components/dashboard/notificaciones.vue'
 import Config from './components/dashboard/config.vue'
-
+// import Vue from 'vue'
+import Vuetify from 'vuetify'
 Vue.use(Router)
+Vue.use(Vuetify)
 Vue.config.productionTip = false
 
 var router = new Router({

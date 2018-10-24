@@ -1,106 +1,78 @@
 <template>
-<div>
-  <div class="box box-default box-solid">
-    <div class="box-header with-border">
-      <h3 class="box-title">Expandable</h3>
-
-      <div class="box-tools pull-right">
-        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-        </button>
-      </div>
-      <!-- /.box-tools -->
-    </div>
-    <!-- /.box-header -->
-    <div class="box-body" style="">
-      The body of the box
-    </div>
-    <!-- /.box-body -->
+  <div>
+    <tablero  v-bind:Tabla="tabla" :Headers="headers" :Title="title" />
   </div>
-  <div class="box box-info">
-    <div class="box-header with-border">
-      <h3 class="box-title">Festivales</h3>
-      <div class="box-tools pull-right">
-        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-        </button>
-        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-      </div>
-    </div>
-    <!-- /.box-header -->
-    <div class="box-body">
-      <div class="table-responsive">
-      <table class="table table-hover">    
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Status</th>
-            <th>Ciudad</th>
-            <th>Teatro principal</th>
-            <th>Persona</th>
-            <th>Ultimo acceso</th>
-            <th>Funciones desprendidas</th>
-            <th>Proxima edición</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Teatro a mil</td>
-            <td><span class="label label-success">Verificado</span></td>
-            <td>Santiago, CL</td>
-            <td>GAM</td>
-            <td>Claudio Tolca<label>cc@tolca.com.ar</label></td>
-            <td>11-7-2014</td>
-            <td>1</td>
-            <td>11-7-2014</td>
-            <td>Ver perfil | Editar | Suspender | Eliminar</td>
-          </tr>
-          <tr>
-            <td>Festival internacional de teatro de Bahia Blanca</td>
-            <td><span class="label label-warning">Pendiente</span></td>
-            <td>Bahia Blanca, AR</td>
-            <td>Municipal</td>
-            <td>Marcos Moreira<label>lamuni@cordoba.com.ar</label></td>
-            <td>11-7-2014</td>
-            <td>1</td>
-            <td>11-7-2014</td>
-            <td>Ver perfil | Editar | Suspender | Eliminar</td>
-          </tr>
-          <tr>
-            <td>Festival internacional temporales de teatro</td>
-            <td><span class="label label-danger">Denied</span></td>
-            <td>Puerto mont, CL</td>
-            <td>CCPM</td>
-            <td>Marcos Moreira<label>lamuni@cordoba.com.ar</label></td>
-            <td>11-7-2014</td>
-            <td>1</td>
-            <td>11-7-2014</td>
-            <td>Ver perfil | Editar | Suspender | Eliminar</td>
-          </tr>
-          <tr>
-            <td>Pirologias</td>
-            <td><span class="label label-danger">Denied</span></td>
-            <td>Haedo, AR</td>
-            <td>Border</td>
-            <td>Marcos Moreira<label>lamuni@cordoba.com.ar</label></td>
-            <td>11-7-2014</td>
-            <td>1</td>
-            <td>11-7-2014</td>
-            <td>Ver perfil | Editar | Suspender | Eliminar</td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
-      <!-- /.table-responsive -->
-    </div>
-    <!-- /.box-body -->
-    <!-- /.box-footer -->
-  </div>
-</div>
 </template>
 <script>
-export default {
-  name: 'Festivales',
-  components: {
+
+  import Tablero from './tablero'
+
+  export default {
+    name: 'Festivales',
+    components: {
+      Tablero,
+    },
+    data () {
+      return {
+        title: 'Festivales',
+        tabla: [
+          {
+            Nombre: "Teatro a mil",
+            Status: "Verificado",
+            Ciudad: "Santiago, CL",
+            TeatroPrincipal: "GAM",
+            Persona: "Claudio Tolca, cc@tolca.com.ar",
+            UltimoAcceso: "11-7-2014",
+            FuncionesDesprendidas: "1",
+            ProximaEdición: "11-7-2014",
+            Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
+          },
+          {
+            Nombre: "Festival internacional de teatro de Bahia Blanca",
+            Status: "Pendiente",
+            Ciudad: "Bahia Blanca, AR",
+            TeatroPrincipal: "Municipal",
+            Persona: "Marcos Moreira, lamuni@cordoba.com.ar",
+            UltimoAcceso: "11-7-2014",
+            FuncionesDesprendidas: "1",
+            ProximaEdición: "11-7-2014",
+            Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
+          },
+          {
+            Nombre: "Festival internacional temporales de teatro",
+            Status: "Denied",
+            Ciudad: "Puerto mont, CL",
+            TeatroPrincipal: "CCPM",
+            Persona: "Marcos Moreira, lamuni@cordoba.com.ar",
+            UltimoAcceso: "11-7-2014",
+            FuncionesDesprendidas: "1",
+            ProximaEdición: "11-7-2014",
+            Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
+          },
+          {
+            Nombre: "Pirologias",
+            Status: "Denied",
+            Ciudad: "Haedo, AR",
+            TeatroPrincipal: "Border",
+            Persona: "Marcos Moreira, lamuni@cordoba.com.ar",
+            UltimoAcceso: "11-7-2014",
+            FuncionesDesprendidas: "1",
+            ProximaEdición: "11-7-2014",
+            Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
+          },
+        ],
+        headers: [
+          { text: 'Nombre', align: 'left', value: 'Nombre' },
+          { text: 'Status', align: 'left', value: 'Status' }, 
+          { text: 'Ciudad', align: 'left', value: 'Ciudad' },
+          { text: 'Teatro Principal', align: 'left', value: 'TeatroPrincipal' },
+          { text: 'Persona', align: 'left', value: 'Persona' }, 
+          { text: 'Ultimo Acceso', align: 'left', value: 'UltimoAcceso' },          
+          { text: 'Funciones Desprendidas', align: 'left', value: 'FuncionesDesprendidas' },
+          { text: 'Proxima Edición', align: 'left', value: 'ProximaEdición' },
+          { text: 'Acciones', align: 'left', value: 'Acciones' },
+        ],
+      }
+    }
   }
-}
 </script>

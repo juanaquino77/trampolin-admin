@@ -1,52 +1,81 @@
 <template>
   <div class="box box-info">
-      <div class="box-header with-border">
-        <h3 class="box-title">{{Tabla.Header}}</h3>
-        <div class="box-tools pull-right">
-          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-          </button>
-          <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-        </div>
+    <div class="box-header with-border">
+      <h3 class="box-title" > {{ Title }} </h3>
+      <div class="box-tools pull-right">
+        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+        </button>
+        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
       </div>
-      <!-- /.box-header -->
-      <div class="box-body">
-        <div class="table-responsive">
-        <table class="table table-hover">    
-          <thead>
-            <tr>
-              <th v-for="(item, key) in Tabla.Body[1]">{{ key }}</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="(item, key) in Tabla.Body">
-              <td>{{ item.Espectaculo }}</td>
-              <td>{{ item.Importe }}</td>
-              <td><span class="label label-success">{{ item.Estado }}</span></td>
-              <td>{{ item.FechaFuncion }}</td>
-              <td>{{ item.FechaAcuerdo }}</td>
-              <td>{{ item.Acuerdo }}</td>
-              <td>{{ item.TeatroFestival }}</td>
-              <td>{{ item.CiudadPais }}</td>
-              <td>{{ item.Acciones }}</td> 
-           </tr>
-          </tbody>
-        </table>
-        </div>
-        <!-- /.table-responsive -->
-      </div>
-      <!-- /.box-body -->
-      <!-- /.box-footer -->
     </div>
+    <div class="box-body">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="col-md-3">
+            <v-select 
+              label="Search By:" 
+              :items="Headers"
+              v-model="selectOption"
+              @change="checkAnswer" 
+            ></v-select>
+          </div>
+          <div class="col-md-4">
+            <v-select 
+              label="Opcion Elegida" 
+              :items="filterArray"
+              v-model="searchType"
+            ></v-select>
+          </div>
+          <h4>{{ searchType }}</h4>
+        </div>
+          <v-data-table 
+            :headers="Headers"
+            :items="filteredItems"
+          >
+            <template slot="items" scope=" { item } ">
+              <td v-for="value in item">{{ value }}</td>
+            </template>
+          </v-data-table>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
 export default {
-  props: ['Tabla'],
+  props: ['Tabla', 'Tablas', 'Headers', 'Title'],
   name: 'Tablero',
   components: {
   },
+  data () {
+    return {
+      searchType: '',
+      selectOption: '',
+      filterArray: [],
+    }
+  },
   created: function () {
-    // `this` points to the vm instance
-    alert('a is: '+ this.Tabla.Header)
+  },
+  computed: {
+    filteredItems() {
+      let choice = this.selectOption;
+      return this.Tabla.filter((item) => { 
+        return !this.searchType || item[choice].toLowerCase().includes(this.searchType.toLowerCase())
+      })
+    }
+  },
+  methods: {
+    checkAnswer () {
+      this.searchType = '';
+      let choice = this.selectOption;
+      let filterArrayAux = [];      
+      this.Tabla.filter((item) => {
+        if (choice !== '')
+        {
+          filterArrayAux.push(item[choice]);
+        };
+      });
+      this.filterArray = filterArrayAux;
+    },
   }
 }
 </script>

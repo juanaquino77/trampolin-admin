@@ -1,78 +1,75 @@
 <template>
-  <div class="box box-info">
-    <!-- <div class="box-header with-border">
-      <h3 class="box-title">Teatros</h3>
-      <div class="box-tools pull-right">
-        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-        </button>
-        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-      </div>
-    </div> -->
-    <tablero  v-bind:Tabla="tabla"/>
+  <div>
+    <tablero v-bind:Tabla="tabla" :Headers="headers" :Title="title" />
   </div>
-  
 </template>
 <script>
 import Tablero from './tablero'
-
 export default {
-  props: ['Tabla'],
   name: 'Teatro',
   components: {
-  'tablero': Tablero,
-    
+    Tablero,
   },
   data () {
     return {
-      tabla: {
-        Header: "Pagos",        
-        Body: [
-          {
-            "Nombre": "Teatro Municipal",
-            "Status": "Verificado",
-            "Ciudad": "Mar del Plata, AR",
-            "Domicilio": "Luro 222",
-            "Persona": "Claudio Tolca, cc@tolca.com.ar",
-            "UltimoAcceso": "11-7-2014",
-            "FuncionesAcordadas": "1",
-            "ProximaFuncion": "11-7-2014",
-            "Acciones": ["Ver perfil", "Editar", "Suspender", "Eliminar"]
-          },
-          {
-            "Nombre": "Teatro Colon",
-            "Status": "Pendiente",
-            "Ciudad": "Mar del Plata, AR",
-            "Domicilio": "Luro 222",
-            "Persona": "Claudio Tolca, cc@tolca.com.ar",
-            "UltimoAcceso": "11-7-2014",
-            "FuncionesAcordadas": "1",
-            "ProximaFuncion": "11-7-2014",
-            "Acciones": ["Ver perfil", "Editar", "Suspender", "Eliminar"]
-          },
-          {
-            "Nombre": "Teatro Municipal",
-            "Status": "Verificado",
-            "Ciudad": "Mar del Plata, AR",
-            "Domicilio": "Luro 222",
-            "Persona": "Claudio Tolca, cc@tolca.com.ar",
-            "UltimoAcceso": "11-7-2014",
-            "FuncionesAcordadas": "1",
-            "ProximaFuncion": "11-7-2014",
-            "Acciones": ["Ver perfil", "Editar", "Suspender", "Eliminar"]
-          },
-          {
-            "Nombre": "Teatro Municipal",
-            "Status": "Verificado",
-            "Ciudad": "Mar del Plata, AR",
-            "Domicilio": "Luro 222",
-            "Persona": "Claudio Tolca, cc@tolca.com.ar",
-            "UltimoAcceso": "11-7-2014",
-            "FuncionesAcordadas": "1",
-            "ProximaFuncion": "11-7-2014",
-            "Acciones": ["Ver perfil", "Editar", "Suspender", "Eliminar"]
-          }
-        ],
-      },
+      title: 'Teatros',
+      tabla: [
+        {   
+          Nombre: "Timbre 4",
+          Status: "Verificado",
+          Ciudad: "CABA, AR",
+          Domicilio: "Luro 222",
+          Persona: "Claudio Tolca, cc@tolca.com.ar",
+          UltimoAcceso: "11-7-2017",
+          FuncionesAcordadas: "1",
+          ProximaFuncion: "17-7-2014",            
+          Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
+        },
+        {
+          Nombre: "Teatro Colon",
+          Status: "Pendiente",
+          Ciudad: "Cordoba, AR",
+          Domicilio: "Colon 222",
+          Persona: "Claudio Tolca, cc@tolca.com.ar",
+          UltimoAcceso: "11-7-2044",
+          FuncionesAcordadas: "2",
+          ProximaFuncion: "1-7-2014",            
+          Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
+        },
+        {
+          Nombre: "Teatro Municipal",
+          Status: "Verificado",
+          Ciudad: "Santiago, CL",
+          Domicilio: "Luro 22",
+          Persona: "Claudio Tolca, cc@tolca.com.ar",
+          UltimoAcceso: "11-7-2019",
+          FuncionesAcordadas: "3",
+          ProximaFuncion: "Inexistente",            
+          Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
+        },
+        {
+          Nombre: "Teatro Auditorio",
+          Status: "Verificado",
+          Ciudad: "Mar del Plata, AR",
+          Domicilio: "Luro 234",
+          Persona: "Claudio Tolca, cc@tolca.com.ar",
+          UltimoAcceso: "11-7-2011",
+          FuncionesAcordadas: "4",
+          ProximaFuncion: "Inexistente",            
+          Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
+        }
+      ],
+      headers: [
+        { text: 'Nombre', align: 'left', value: 'Nombre' },
+        { text: 'Status', align: 'left', value: 'Status' }, 
+        { text: 'Ciudad', align: 'left', value: 'Ciudad' },
+        { text: 'Domicilio', align: 'left', value: 'Domicilio' },
+        { text: 'Persona', align: 'left', value: 'Persona' }, 
+        { text: 'Ultimo Acceso', align: 'left', value: 'UltimoAcceso' },          
+        { text: 'Funciones Acordadas', align: 'left', value: 'FuncionesAcordadas' },
+        { text: 'Proxima Funcion', align: 'left', value: 'ProximaFuncion' },
+        { text: 'Acciones', align: 'left', value: 'Acciones' },
+      ],
     }
   }
 }

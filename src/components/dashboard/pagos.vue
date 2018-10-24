@@ -11,81 +11,77 @@
         $ 150.000
       </div><!-- /.box-body -->
     </div><!-- /.box -->
-    <!-- <div class="row"> -->
-      <!-- <div class="col-md-3"> -->
-        <!-- <table v-bind:Tabla="algo" /> -->
-        <tablero  v-bind:Tabla="tabla"/>
-        <!-- <search /> -->
-      <!-- </div> -->
-      <!-- <div class="col-md-3"> -->
-        <!-- <search /> -->
-      <!-- </div> -->
-    <!-- </div> -->
-
-    <!-- <blog-post  + ' by ' + post.author.name"> -->
+    <tablero  v-bind:Tabla="tabla" :Headers="headers" :Title="title" />
   </div>  
 </template>
 <script>
 import Tablero from './tablero'
-import Search from './search'
 
 export default {
   name: 'Pagos',
   components: {
-  'tablero': Tablero,
-  'search': Search,  
+    Tablero,
   },
   data () {
     return {
-      tabla: {
-        Header: "Pagos",        
-        Body: [
-          {
-            "Espectaculo": "La Obra de Marcos",
-            "Importe": "$ 1.000",
-            "Estado": "Pagado",
-            "FechaFuncion": "11-7-2014",
-            "FechaAcuerdo": "11-7-2014",
-            "Acuerdo": "PDF",
-            "TeatroFestival": "Teatro Municipal",
-            "CiudadPais": "CABA, AR",
-            "Acciones": ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
-          },
-          {
-            "Espectaculo": "La Obra de Marcos",
-            "Importe": "$ 1.000",
-            "Estado": "Pagado",
-            "FechaFuncion": "11-7-2014",
-            "FechaAcuerdo": "11-7-2014",
-            "Acuerdo": "PDF",
-            "TeatroFestival": "Teatro Municipal",
-            "CiudadPais": "CABA, AR",
-            "Acciones": ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
-          },
-          {
-            "Espectaculo": "La Obra de Marcos",
-            "Importe": "$ 1.000",
-            "Estado": "Pagado",
-            "FechaFuncion": "11-7-2014",
-            "FechaAcuerdo": "11-7-2014",
-            "Acuerdo": "PDF",
-            "TeatroFestival": "Teatro Municipal",
-            "CiudadPais": "CABA, AR",
-            "Acciones": ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"],
-          },
-          {
-            "Espectaculo": "La Obra de Marcos",
-            "Importe": "$ 1.000",
-            "Estado": "Pagado",
-            "FechaFuncion": "11-7-2014",
-            "FechaAcuerdo": "11-7-2014",
-            "Acuerdo": "PDF",
-            "TeatroFestival": "Teatro Municipal",
-            "CiudadPais": "CABA, AR",
-            "Acciones": ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"],
-          }
-        ],
-      },
+      title: "Pagos",        
+      tabla: [
+        {
+          Espectaculo: "La Obra de Marcos",
+          Importe: "$ 1.000",
+          Estado: "Pagado",
+          FechaFuncion: "11-7-2014",
+          FechaAcuerdo: "11-7-2014",
+          Acuerdo: "PDF",
+          TeatroFestival: "Teatro Municipal",
+          CiudadPais: "CABA, AR",
+          Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
+        },
+        {
+          Espectaculo: "La Obra de Marcos",
+          Importe: "$ 1.000",
+          Estado: "Pagado",
+          FechaFuncion: "11-7-2014",
+          FechaAcuerdo: "11-7-2014",
+          Acuerdo: "PDF",
+          TeatroFestival: "Teatro Municipal",
+          CiudadPais: "CABA, AR",
+          Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
+        },
+        {
+          Espectaculo: "La Obra de Marcos",
+          Importe: "$ 1.000",
+          Estado: "Pagado",
+          FechaFuncion: "11-7-2014",
+          FechaAcuerdo: "11-7-2014",
+          Acuerdo: "PDF",
+          TeatroFestival: "Teatro Municipal",
+          CiudadPais: "CABA, AR",
+          Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"],
+        },
+        {
+          Espectaculo: "La Obra de Marcos",
+          Importe: "$ 1.000",
+          Estado: "Pagado",
+          FechaFuncion: "11-7-2014",
+          FechaAcuerdo: "11-7-2014",
+          Acuerdo: "PDF",
+          TeatroFestival: "Teatro Municipal",
+          CiudadPais: "CABA, AR",
+          Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"],
+        }
+      ],
+      headers: [
+        { text: 'Espectaculo', align: 'left', value: 'Espectaculo' },
+        { text: 'Importe', align: 'left', value: 'Importe' }, 
+        { text: 'Estado', align: 'left', value: 'Estado' },
+        { text: 'Fecha Funcion', align: 'left', value: 'FechaFuncion' },
+        { text: 'Fecha Acuerdo', align: 'left', value: 'FechaAcuerdo' }, 
+        { text: 'Acuerdo', align: 'left', value: 'Acuerdo' },          
+        { text: 'Teatro Festival', align: 'left', value: 'TeatroFestival' },
+        { text: 'Ciudad Pais', align: 'left', value: 'CiudadPais' },
+        { text: 'Acciones', align: 'left', value: 'Acciones' },
+      ],
     }
   }
 }

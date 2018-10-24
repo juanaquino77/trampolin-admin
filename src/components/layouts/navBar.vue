@@ -1,34 +1,8 @@
 <template>
 <div>
-  <va-navBar/>
-    <aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
+  <aside class="main-sidebar">
     <section class="sidebar" style="height: auto;">
-      <!-- Sidebar user panel
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-        </div>
-        <div class="pull-left info">
-          <p>Alexander Pierce</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
-      </div>
-      search form
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-          <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
-                  <i class="fa fa-search"></i>
-                </button>
-              </span>
-        </div>
-      </form> -->
-      <!-- /.search form -->
-      <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu tree" data-widget="tree">
-        <!-- <li class="header">MAIN NAVIGATION</li> -->
         <li class="treeview">
           <!-- <span> -->
           <router-link to="/espectaculos" class="router-link">
@@ -104,53 +78,30 @@
           <router-link to="/notificaciones" class="router-link">
           <i class="fa fa-edit"></i>
                 <span>Notificaciones</span>
-              <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
           </router-link>
-          <!-- <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
-          </ul> -->
         </li>
         <li class="treeview">
           <router-link to="/config" class="router-link">
           <i class="fa fa-table"></i>
               <span>Configuración</span>
-              <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
           </router-link>
-          <!-- <ul class="treeview-menu">
-            <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
-          </ul>  -->
         </li>
-      <!-- <li class="bg-success"><a href="https://themequarry.com"><i class="fa fa-star-o" style="color: rgb(255, 255, 255);"></i><span style="color: rgb(255, 255, 255);">Premium Templates</span></a></li> -->
       </ul>
     </section>
-    <!-- /.sidebar -->
   </aside>
 </div>
 </template>
 
 <script>
-import navBar from '../../../node_modules/vue2-admin-lte/src/NaviBar.vue'
-// import DashboardV2 from '../dashboard/Dashboard.v2'
-
-export default {
-  name: 'navBar',
-  props: {
-    // msg: String
-  },
+  export default {
+    name: 'navBar',
+    props: {
+    },
     components: {
-      'va-navBar': navBar,
-      // 'dashboardV2': DashboardV2,
-  }
-} 
+    }
+  } 
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
   .skin-black .main-header .logo {
     background-color: #367fa9;
