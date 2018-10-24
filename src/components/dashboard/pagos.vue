@@ -11,7 +11,7 @@
         $ 150.000
       </div><!-- /.box-body -->
     </div><!-- /.box -->
-    <tablero  v-bind:Tabla="tabla" :Headers="headers" :Title="title" />
+    <tablero  v-bind:Tabla="tabla" :Headers="headers" :Title="title" :Acciones="acciones" />
   </div>  
 </template>
 <script>
@@ -35,7 +35,7 @@ export default {
           Acuerdo: "PDF",
           TeatroFestival: "Teatro Municipal",
           CiudadPais: "CABA, AR",
-          Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
+          // Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
         },
         {
           Espectaculo: "La Obra de Marcos",
@@ -46,7 +46,7 @@ export default {
           Acuerdo: "PDF",
           TeatroFestival: "Teatro Municipal",
           CiudadPais: "CABA, AR",
-          Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
+          // Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
         },
         {
           Espectaculo: "La Obra de Marcos",
@@ -57,7 +57,7 @@ export default {
           Acuerdo: "PDF",
           TeatroFestival: "Teatro Municipal",
           CiudadPais: "CABA, AR",
-          Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"],
+          // Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"],
         },
         {
           Espectaculo: "La Obra de Marcos",
@@ -68,9 +68,10 @@ export default {
           Acuerdo: "PDF",
           TeatroFestival: "Teatro Municipal",
           CiudadPais: "CABA, AR",
-          Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"],
+          // Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"],
         }
       ],
+      acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"],      
       headers: [
         { text: 'Espectaculo', align: 'left', value: 'Espectaculo' },
         { text: 'Importe', align: 'left', value: 'Importe' }, 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <tablero v-bind:Tabla="tabla" :Headers="headers" :Title="title" />
+    <tablero v-bind:Tabla="tabla" :Headers="headers" :Title="title" :Acciones="acciones"/>
   </div>
 </template>
 <script>
@@ -23,7 +23,7 @@ export default {
           UltimoAcceso: "11-7-2017",
           FuncionesAcordadas: "1",
           ProximaFuncion: "17-7-2014",            
-          Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
+          // Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
         },
         {
           Nombre: "Teatro Colon",
@@ -34,7 +34,7 @@ export default {
           UltimoAcceso: "11-7-2044",
           FuncionesAcordadas: "2",
           ProximaFuncion: "1-7-2014",            
-          Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
+          // Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
         },
         {
           Nombre: "Teatro Municipal",
@@ -45,7 +45,7 @@ export default {
           UltimoAcceso: "11-7-2019",
           FuncionesAcordadas: "3",
           ProximaFuncion: "Inexistente",            
-          Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
+          // Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
         },
         {
           Nombre: "Teatro Auditorio",
@@ -56,9 +56,10 @@ export default {
           UltimoAcceso: "11-7-2011",
           FuncionesAcordadas: "4",
           ProximaFuncion: "Inexistente",            
-          Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
+          // Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
         }
       ],
+      acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"],
       headers: [
         { text: 'Nombre', align: 'left', value: 'Nombre' },
         { text: 'Status', align: 'left', value: 'Status' }, 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <tablero  v-bind:Tabla="tabla" :Headers="headers" :Title="title" />
+    <tablero  v-bind:Tabla="tabla" :Headers="headers" :Title="title" :Acciones="acciones"/>
   </div>
 </template>
 <script>
@@ -25,7 +25,7 @@
             UltimoAcceso: "11-7-2014",
             FuncionesDesprendidas: "1",
             ProximaEdición: "11-7-2014",
-            Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
+            // Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
           },
           {
             Nombre: "Festival internacional de teatro de Bahia Blanca",
@@ -36,7 +36,7 @@
             UltimoAcceso: "11-7-2014",
             FuncionesDesprendidas: "1",
             ProximaEdición: "11-7-2014",
-            Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
+            // Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
           },
           {
             Nombre: "Festival internacional temporales de teatro",
@@ -47,7 +47,7 @@
             UltimoAcceso: "11-7-2014",
             FuncionesDesprendidas: "1",
             ProximaEdición: "11-7-2014",
-            Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
+            // Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
           },
           {
             Nombre: "Pirologias",
@@ -58,9 +58,10 @@
             UltimoAcceso: "11-7-2014",
             FuncionesDesprendidas: "1",
             ProximaEdición: "11-7-2014",
-            Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
+            // Acciones: ["Ver perfil", "Editar", "Suspender", "Eliminar"]
           },
         ],
+      acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"],
         headers: [
           { text: 'Nombre', align: 'left', value: 'Nombre' },
           { text: 'Status', align: 'left', value: 'Status' }, 

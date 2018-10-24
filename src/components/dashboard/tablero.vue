@@ -20,29 +20,64 @@
             ></v-select>
           </div>
           <div class="col-md-4">
+            <v-text-field
+              v-model="searchType"
+              append-icon="search"
+              label="Opcion Elegida"
+              single-line
+              hide-details
+            ></v-text-field>
+          </div>
+          <div class="col-md-4">
             <v-select 
-              label="Opcion Elegida" 
+              label="Listado"
               :items="filterArray"
               v-model="searchType"
             ></v-select>
           </div>
-          <h4>{{ searchType }}</h4>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
           <v-data-table 
             :headers="Headers"
             :items="filteredItems"
+            :acciones="Acciones"
           >
-            <template slot="items" scope=" { item } ">
+            <template slot="items" scope=" { item } " class="table-responsive">
               <td v-for="value in item">{{ value }}</td>
+              <td>
+                <template v-if="acciones">
+                  <router-link to="/suspender">
+                    <i class="v-icon material-icons">clear</i> 
+                    <!-- <span class="fa fa-trash"></span> -->
+                  </router-link>
+                  <router-link to="/delete">
+                    <i class="v-icon material-icons">delete</i>
+                  </router-link> 
+                  <router-link to="/verPerfil" >
+                    <i class="v-icon material-icons">add</i>
+                  </router-link> 
+                  <router-link to="/edit">
+                    <i class="v-icon material-icons ">edit</i>
+                  </router-link>   
+                </template>                                   
+              </td>
+            </template>
+            <template slot="no-data">
+              <v-alert :value="true" color="error" icon="warning">
+                No se encontro nada :(
+              </v-alert>
             </template>
           </v-data-table>
-      </div>
+        </div>
+      </div>      
     </div>
   </div>
 </template>
 <script>
 export default {
-  props: ['Tabla', 'Tablas', 'Headers', 'Title'],
+  props: ['Tabla', 'Acciones', 'Headers', 'Title'],
   name: 'Tablero',
   components: {
   },
@@ -51,6 +86,7 @@ export default {
       searchType: '',
       selectOption: '',
       filterArray: [],
+      acciones: this.Acciones,
     }
   },
   created: function () {

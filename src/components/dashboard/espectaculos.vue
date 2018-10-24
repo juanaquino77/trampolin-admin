@@ -1,6 +1,6 @@
 <template>
   <div>
-    <tablero v-bind:Tabla="tabla" :Headers="headers" :Title="title" />
+    <tablero v-bind:Tabla="tabla" :Headers="headers" :Title="title" :Acciones="acciones" />
   </div>
 </template>
 <script>
@@ -24,7 +24,7 @@ export default {
           FuncionesAcordadas: "1",
           DistanciaRecorrida: "100Km",
           ProximaFuncion: "17-7-2014",            
-          Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
+          // Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
         },
         {
           Nombre: "La Obra de Carlos",
@@ -36,7 +36,7 @@ export default {
           FuncionesAcordadas: "2",
           DistanciaRecorrida: "100Km",
           ProximaFuncion: "1-7-2014",            
-          Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
+          // Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
         },
         {
           Nombre: "La Obra de Vanina",
@@ -48,7 +48,7 @@ export default {
           FuncionesAcordadas: "3",
           DistanciaRecorrida: "100Km",
           ProximaFuncion: "Inexistente",            
-          Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
+          // Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
         },
         {
           Nombre: "La Obra de Marcos",
@@ -60,9 +60,10 @@ export default {
           FuncionesAcordadas: "4",
           DistanciaRecorrida: "100Km",
           ProximaFuncion: "Inexistente",            
-          Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
+          // Acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"]
         }
       ],
+      acciones: ["Eviar recordatorio", "Confirmar", "Bonificar", "Eliminar order"],
       headers: [
         { text: 'Nombre', align: 'left', value: 'Nombre' },
         { text: 'Status', align: 'left', value: 'Status' }, 

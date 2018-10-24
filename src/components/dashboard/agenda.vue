@@ -64,6 +64,7 @@ export default {
           CuidadDeOrigen: "Mar del Plata, AR",
         },
       ],
+      acciones: false,
       headers: [
         { text: 'Fecha', align: 'left', value: 'Fecha' },
         { text: 'Espectaculo', align: 'left', value: 'Espectaculo' }, 

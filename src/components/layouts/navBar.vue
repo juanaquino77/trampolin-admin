@@ -1,78 +1,36 @@
 <template>
-<div>
   <aside class="main-sidebar">
     <section class="sidebar" style="height: auto;">
       <ul class="sidebar-menu tree" data-widget="tree">
         <li class="treeview">
-          <!-- <span> -->
           <router-link to="/espectaculos" class="router-link">
-          <!-- <a href="/espectaculos"> -->
             <i class="fa fa-dashboard"></i>
               <span>Espectáculos</span>
-          <!-- </a> -->
-                <!-- <i class="fa fa-angle-left pull-right"></i> -->
-          <!-- <ul class="treeview-menu">
-            <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
-          </ul> -->
           </router-link>
-          <!-- </span> -->
         </li>
         <li class="treeview">
           <router-link to="/teatro" class="router-link">
             <i class="fa fa-files-o"></i>
               <span>Teátros</span>
-              <!-- <span class="pull-right-container">
-                <span class="label label-primary pull-right">4</span>
-              </span> -->
           </router-link>
-          <!-- <ul class="treeview-menu">
-            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-            <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-            <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-          </ul> -->
         </li>
         <li class="treeview">
           <router-link to="/festivales" class="router-link">
             <i class="fa fa-th"></i> 
               <span>Festivales</span>
-              <!-- <span class="pull-right-container">
-                <small class="label pull-right bg-green">new</small>
-              </span> -->
           </router-link>
         </li>
         <li class="treeview">
           <router-link to="/agenda" class="router-link">
             <i class="fa fa-pie-chart"></i>
               <span>Agenda</span>
-              <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
           </router-link>
-          <!-- <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
-          </ul> -->
         </li>
         <li class="treeview">
           <router-link to="/pagos" class="router-link">
           <i class="fa fa-laptop"></i>
               <span>Pagos</span>
-              <!-- <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span> -->
           </router-link>
-          <!-- <ul class="treeview-menu">
-            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-            <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-            <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-            <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-            <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
-          </ul> -->
         </li>
         <li class="treeview">
           <router-link to="/notificaciones" class="router-link">
@@ -89,7 +47,6 @@
       </ul>
     </section>
   </aside>
-</div>
 </template>
 
 <script>
