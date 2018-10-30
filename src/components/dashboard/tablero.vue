@@ -1,7 +1,7 @@
 <template>
   <div class="box box-info">
     <div class="box-header with-border">
-      <h3 class="box-title" > {{ Title }} </h3>
+      <h3 class="box-title" v-text="Title"></h3>
       <div class="box-tools pull-right">
         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
         </button>
@@ -13,27 +13,23 @@
         <div class="col-md-12">
           <div class="col-md-3">
             <v-select 
-              label="Search By:" 
+              class="ect"
+              label="Buscar por:" 
               :items="Headers"
               v-model="selectOption"
               @change="checkAnswer" 
+              color="#e26a6a"
             ></v-select>
           </div>
-          <div class="col-md-4">
-            <v-text-field
+          <div class="col-md-3">
+            <v-autocomplete
               v-model="searchType"
-              append-icon="search"
-              label="Opcion Elegida"
-              single-line
-              hide-details
-            ></v-text-field>
-          </div>
-          <div class="col-md-4">
-            <v-select 
-              label="Listado"
               :items="filterArray"
-              v-model="searchType"
-            ></v-select>
+              label="Opcion Elegida "
+              :no-data-text="noDataText"
+              hide-selected
+              color="#e26a6a"
+            ></v-autocomplete>
           </div>
         </div>
       </div>
@@ -43,9 +39,10 @@
             :headers="Headers"
             :items="filteredItems"
             :acciones="Acciones"
+            class="elevation-5" 
           >
-            <template slot="items" scope=" { item } " class="table-responsive">
-              <td v-for="value in item">{{ value }}</td>
+            <template slot="items" scope="{ item }">
+              <td v-for="value in item" >{{ value }}</td>
               <td>
                 <template v-if="acciones">
                   <router-link to="/suspender">
@@ -53,7 +50,9 @@
                     <!-- <span class="fa fa-trash"></span> -->
                   </router-link>
                   <router-link to="/delete">
-                    <i class="v-icon material-icons">delete</i>
+                  <button type="button" class="btn btn-warning btn-sm btnDelete" >
+                    <i class="fa fa fa-trash"></i>
+                  </button>
                   </router-link> 
                   <router-link to="/verPerfil" >
                     <i class="v-icon material-icons">add</i>
@@ -69,6 +68,11 @@
                 No se encontro nada :(
               </v-alert>
             </template>
+            <template slot="footer">
+              <td colspan="100%">
+                <p>Filtrado por: <strong>{{ selectOption }}</strong></p>
+              </td>
+            </template>
           </v-data-table>
         </div>
       </div>      
@@ -76,6 +80,7 @@
   </div>
 </template>
 <script>
+  import axios from 'axios';
 export default {
   props: ['Tabla', 'Acciones', 'Headers', 'Title'],
   name: 'Tablero',
@@ -87,9 +92,21 @@ export default {
       selectOption: '',
       filterArray: [],
       acciones: this.Acciones,
+      posts: [],
+      errors: [],
+      noDataText: "No existen datos para mostrar",
     }
   },
   created: function () {
+    axios.get(`https://restcountries.eu/rest/v2/all`)
+    .then(response => {
+      // JSON responses are automatically parsed.
+      this.posts = response.data
+      console.log(this.posts[0].capital);
+    })
+    .catch(e => {
+      this.errors.push(e)
+    })
   },
   computed: {
     filteredItems() {
@@ -111,7 +128,8 @@ export default {
         };
       });
       this.filterArray = filterArrayAux;
-    },
+    }
   }
 }
 </script>
+      

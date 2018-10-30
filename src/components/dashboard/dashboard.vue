@@ -1,13 +1,13 @@
 <template>
   <div>
-    <va-small-box
+    <!-- <va-small-box
       color="aqua"
       icon="ion-bag"
       title="150"
       description="New Order"
       @more-click="clickToSmallBox"
       moreText="More info"/>
-    <Dashboard/>
+    <Dashboard/> -->
     <Dashboard2/>
   </div>
 </template>

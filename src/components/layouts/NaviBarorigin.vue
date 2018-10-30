@@ -14,14 +14,14 @@
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <li class="dropdown messages-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <router-link to="/" class="router-link">
               <span>Dashboard</span>
-            </a>
+            </router-link>
           </li>
           <li class="dropdown notifications-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <router-link to="/config" class="router-link">
               <span>Configuración</span>
-            </a>
+            </router-link>            
           </li>
           <li class="dropdown tasks-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -80,52 +80,52 @@ export default {
 
 </script>
 <style scoped>
-  .skin-black .main-header .logo {
-      background-color: #1f1f1f;
-      }
-  .skin-black .main-header .navbar {
-    background-color: #1f1f1f;
+.skin-black .main-header .logo {
+  background-color: #1f1f1f;
+}
+.skin-black .main-header .navbar {
+  background-color: #1f1f1f;
 }
 .skin-black .wrapper, .skin-black .main-sidebar, .skin-black .left-side {
-    background-color: #c5c5c5;
+  background-color: #c5c5c5;
 }
 .page-sidebar, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover {
-    background-color: #c5c5c5;
+  background-color: #c5c5c5;
 }
 .skin-black .main-header .logo:hover {
-    background-color: #1f1f1f;
+  background-color: #1f1f1f;
 }
 .skin-black .main-header .logo {
-    background-color: #1f1f1f;
-    color: #333;
-    border-bottom: 0 solid transparent;
-    border-right: 1px solid transparent;
-    text-align: left;
+  background-color: #1f1f1f;
+  color: #333;
+  border-bottom: 0 solid transparent;
+  border-right: 1px solid transparent;
+  text-align: left;
 }
 .skin-black .main-header .navbar>.sidebar-toggle {
-    color: #9e9e9e;
-    border-right: 1px solid transparent;
+  color: #9e9e9e;
+  border-right: 1px solid transparent;
 }
 .skin-black .main-header .navbar .sidebar-toggle:hover {
-    color: #fff;
-    background: #1f1f1f;
+  color: #fff;
+  background: #1f1f1f;
 }
 .skin-black .main-header .navbar .navbar-custom-menu .navbar-nav>li>a, .skin-black .main-header .navbar .navbar-right>li>a {
-    border-left: 1px solid transparent;
-    border-right-width: 0;
-    color: #9e9e9e;
+  border-left: 1px solid transparent;
+  border-right-width: 0;
+  color: #9e9e9e;
 }
 .skin-black .main-header .navbar .nav>li>a:hover, .skin-black .main-header .navbar .nav>li>a:active, .skin-black .main-header .navbar .nav>li>a:focus, .skin-black .main-header .navbar .nav .open>a, .skin-black .main-header .navbar .nav .open>a:hover, .skin-black .main-header .navbar .nav .open>a:focus, .skin-black .main-header .navbar .nav>.active>a {
-    background: #393939;
+  background: #393939;
 }
 .skin-black .main-header .navbar .navbar-custom-menu .navbar-nav>li {
-    margin: 0;
-    padding: 0 4px;
-    height: 50px;
-    display: inline-block;
+  margin: 0;
+  padding: 0 4px;
+  height: 50px;
+  display: inline-block;
 }
 .navbar-custom-menu .navbar-nav>li>a span{
-    color: #c5c5c5;
+  color: #c5c5c5;
     /* background-color: #e26a6a; */
 }
 </style>

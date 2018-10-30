@@ -6,6 +6,7 @@
           <router-link to="/espectaculos" class="router-link">
             <i class="fa fa-dashboard"></i>
               <span>Espectáculos</span>
+             
           </router-link>
         </li>
         <li class="treeview">
@@ -68,7 +69,7 @@
   .main-sidebar, .main-sidebar-closed.main-sidebar-fixed .main-sidebar:hover {
     background-color: #3d3d3d;
   }
-  .skin-black .wrapper, .skin-black .main-sidebar, .skin-black .left-side {
+  .skin-black .content-wrapper, .skin-black .main-sidebar, .skin-black .left-side {
     background-color: #3d3d3d;
     padding-top: 60px;
     height: 1000px;

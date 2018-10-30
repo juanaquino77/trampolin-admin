@@ -1,18 +1,17 @@
 <template>
   <v-app> 
-    <div id="app" class="wrapper">
+    <div id="app">
       <NaviBarorigin/>
       <navBar/>
       <div class="content-wrapper" style="height: 960px;">
-          <router-view>
-          </router-view>
+        <router-view  />
       </div>
     </div>
   </v-app> 
 </template>
 
 <script>
-  import HelloWorld from './components/HelloWorld'
+  // import HelloWorld from './components/HelloWorld'
   import navBar from './components/layouts/navBar'
   import  Dashboard  from './components/dashboard/tablero'
   import NaviBarorigin from './components/layouts/NaviBarorigin'
@@ -28,7 +27,7 @@
       navBar,
       Dashboard,
       NaviBarorigin,
-    }
+    },
   }
 </script>
 

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import './plugins/vuetify'
 import App from './App.vue'
 import Router from 'vue-router'
+import Login from './components/login/login.vue'
 import Dashboard from './components/dashboard/dashboard.vue'
 import Teatro from './components/dashboard/teatro.vue'
 import Espectaculos from './components/dashboard/espectaculos.vue'
@@ -18,6 +19,10 @@ Vue.config.productionTip = false
 
 var router = new Router({
   routes: [
+    {
+      path: '/login',
+      component: Login
+    },
     {
       path: '/',
       component: Dashboard

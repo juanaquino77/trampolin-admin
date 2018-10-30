@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div> 
     <tablero v-bind:Tabla="tabla" :Headers="headers" :Title="title" :Acciones="acciones" />
   </div>
 </template>
@@ -10,6 +10,7 @@ export default {
   components: {
     Tablero,
   },
+
   data () {
     return {
       title: 'Espectaculos',
